@@ -9,7 +9,7 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-    //mavenCentral()
+    //mavenCentral()spring-boot-starter-parent
     maven {
         url 'http://maven.aliyun.com/nexus/content/groups/public/'
     }
@@ -17,6 +17,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.1.12.RELEASE', ext: 'pom'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
