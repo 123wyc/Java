@@ -16,6 +16,8 @@ repositories {
 }
 
 dependencies {
+    compile 'io.vertx:vertx-core:3.4.2'//新增 vert.x core的依赖
+    compile 'io.vertx:vertx-web:3.4.2'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.1.12.RELEASE', ext: 'pom'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
