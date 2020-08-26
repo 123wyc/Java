@@ -17,9 +17,9 @@ public class Main {
     public static void main(String[] args) {
         AbstractPerson person = new Boy();
         PersonCloth clothCheap = new CheapCloth(person);
-        // clothCheap.dressed();
-        PersonCloth clothExpensive = new ExpensiveCloth(clothCheap);
-        // PersonCloth clothExpensive = new ExpensiveCloth(new CheapCloth(person));
+         clothCheap.dressed();
+        //PersonCloth clothExpensive = new ExpensiveCloth(clothCheap);
+       PersonCloth clothExpensive = new ExpensiveCloth(new CheapCloth(person));
         clothExpensive.dressed();
     }
 
