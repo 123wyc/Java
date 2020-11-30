@@ -1,5 +1,9 @@
 package com.example.wyc.DesignPatterns.Decorator;
 
+
+
+import java.time.LocalDateTime;
+
 /**
  * @author wyc
  * @date 2020/6/1/15:53
@@ -19,7 +23,16 @@ public abstract  class PersonCloth  extends AbstractPerson{
 
     @Override
     public void dressed(){
+        int st = LocalDateTime.now().getSecond();
         mPerson.dressed();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        int et =  LocalDateTime.now().getSecond();
+
+        System.out.println(et -st);
     }
 
 
