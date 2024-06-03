@@ -1,10 +1,9 @@
 package com.example.wyc.DesignPatterns.Strategy;
 
-import org.springframework.stereotype.Component;
+import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
 
 /**
  * @author wyc

@@ -1,33 +1,24 @@
 plugins {
-    id 'org.springframework.boot' version '2.2.5.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'org.springframework.boot' version '3.3.0'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
     id 'java'
 }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '17'
 
 repositories {
     //mavenCentral()spring-boot-starter-parent
     maven {
-        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        url 'https://maven.aliyun.com/nexus/content/groups/public/'
     }
 }
 
 dependencies {
     implementation 'junit:junit:4.12'
-    compile 'io.vertx:vertx-core:3.4.2'//新增 vert.x core的依赖
-    compile 'io.vertx:vertx-web:3.4.2'
-    compile group: 'com.alibaba', name: 'easyexcel', version: '2.2.6'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.1.12.RELEASE', ext: 'pom'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.3.5.RELEASE'
-    implementation group: 'edu.stanford.nlp', name: 'stanford-corenlp', version: '4.2.2'
-    implementation group: 'cn.hutool', name: 'hutool-core', version: '5.7.22'
     implementation group: 'com.alibaba', name: 'fastjson', version: '2.0.7'
-    implementation group: 'redis.clients', name: 'jedis', version: '4.2.3'
-
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
